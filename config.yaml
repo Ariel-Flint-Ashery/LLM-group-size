@@ -1,0 +1,34 @@
+network:
+  network_type: 'complete'
+  degree: 4
+  alpha: 0.41
+  beta: 0.54 
+  erdos_p: 0.5
+minority:
+  minority_size_set: [0]
+  committment_index: 1
+params:
+  temperature: 0.5
+  runs: 1000
+  total_interactions: 2400
+  N_list: [2,  3,  4,  6,  7,  10,  13,  18,  24,  32,  42,  56,  75,  100,  133,  178,  237,  316,  422,  562, 750, 1000] 
+  initial_set: ['None']
+  convergence_time: 72
+  convergence_threshold: 0.98
+  rewards_set: [[-50, 100]]
+  memory_size_set: [5] 
+  options_set: 'stereo' # 'antistereo'
+sim:
+  version: 'swap'
+  fill_blank: False
+  continue_evolution: False
+  consensus_evolution: False
+  stochastic: True
+  mode: 'gpu'
+model:
+  model_name: "microsoft/phi-4" 
+  shorthand: "phi_4" 
+  API_TOKEN: 'YOUR_API_TOKEN_HERE'
+  sys_prompt_is_avail: True
+  chat_template_is_avail: True
+  quantized: True
